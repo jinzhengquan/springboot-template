@@ -13,22 +13,3 @@ spring:
     open-in-view: false
   messages:
     basename: messages.exception
-
-  datasource:
-    initial-size: 10
-    max-active: 50
-    max-wait: 1000
-    min-idle: 10
-    name: accounting
-    test-on-borrow: true
-    url: jdbc:mysql://localhost:3306/mock
-    username: root
-    password: 123456789
-    validation-query: SELECT 1
-  redis:
-    database: 0
-    pool:
-      min-idle: 1
-      max-idle: 4
-server:
-  port: 8888
