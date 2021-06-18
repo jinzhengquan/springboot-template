@@ -18,8 +18,8 @@ class StudentQueryController {
     lateinit var studentQuery: StudentQuery;
 
     @GetMapping("/findByName")
-    fun finByName(name: String, pageable: Pageable): List<Student> {
-        return studentQuery.findByName(name, pageable);
+    fun findByName(name: String, page:Int, size:Int): List<Student> {
+        return studentQuery.findByName(name, page, size);
     }
 
 }

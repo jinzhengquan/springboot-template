@@ -1,5 +1,5 @@
-import org.springframework.boot.gradle.plugin.SpringBootPlugin
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.gradle.plugin.SpringBootPlugin
 
 plugins {
 	java
@@ -12,7 +12,7 @@ plugins {
 
 group = "com.example"
 version = "0.0.1-SNAPSHOT"
-java.sourceCompatibility = JavaVersion.VERSION_16
+java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
 	maven("https://mvnrepository.com/artifact/")
@@ -22,6 +22,7 @@ repositories {
 
 dependencies {
 	implementation(platform(SpringBootPlugin.BOM_COORDINATES))
+	implementation(platform("org.springframework.cloud:spring-cloud-dependencies:2020.0.2"))
 
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
@@ -40,7 +41,10 @@ dependencies {
 	implementation("org.mapstruct:mapstruct-jdk8:1.2.0.Final")
 	implementation("com.graphql-java-kickstart:graphql-java-tools:5.4.0")
 	implementation("com.graphql-java:graphql-spring-boot-starter:5.0.2")
-	implementation("com.graphql-java:graphql-spring-boot-starter:5.0.2")
+	implementation("com.graphql-java:graphiql-spring-boot-starter:5.0.2")
+	implementation("com.zhokhov.graphql:graphql-datetime-spring-boot-starter:4.0.0")
+	implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:2021.1")
+
 
 	annotationProcessor("org.mapstruct:mapstruct-processor:1.2.0.Final")
 
@@ -61,7 +65,7 @@ dependencies {
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
-		jvmTarget = "16"
+		jvmTarget = "1.8"
 	}
 }
 

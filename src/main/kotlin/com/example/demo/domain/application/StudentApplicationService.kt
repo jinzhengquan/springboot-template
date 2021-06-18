@@ -2,15 +2,14 @@ package com.example.demo.domain.application
 
 import com.example.demo.domain.model.Student
 import com.example.demo.domain.repository.StudentRepository
+import graphql.kickstart.tools.GraphQLMutationResolver
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.data.domain.PageRequest
-import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Component
 import org.springframework.transaction.annotation.Transactional
 
 @Component
 @Transactional(readOnly = true)
-class StudentApplicationService {
+class StudentApplicationService: GraphQLMutationResolver {
 
     @Autowired
     lateinit var studentRepository: StudentRepository;

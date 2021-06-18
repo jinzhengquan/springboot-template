@@ -5,9 +5,9 @@ springboot-template
 
 * Kotlin/Java/GraphQl
 * Gradle 7.0+
-* spring boot、 jpa
-* mysql
+* spring boot、 jpa、mysql、redis
 * junit
+* nacos
 
 ## 2. 核心原则
 
@@ -31,6 +31,25 @@ springboot-template
 ```shell
 cp pre-commit .git/hooks/
 ```
+
+## 5.tips
+### 5.1 GraphQL mutation
+mutation{
+    addStudent(name: "test", createdBy: "admin") {
+        id
+        name
+        createdAt
+    }
+}
+### 5.2 GraphQL query
+{
+    findByName(name:"test", page:0, size:10){
+        id
+        name
+        createdAt
+    }
+}
+
 
 
 

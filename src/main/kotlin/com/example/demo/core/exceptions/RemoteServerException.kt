@@ -1,8 +1,10 @@
 package com.example.demo.core.exceptions
 
-sealed class DomainException : RuntimeException {
-    var errorCode: String;
+class RemoteServerException : RuntimeException {
+    lateinit var errorCode: String;
     var params: List<String>? = null;
+
+    constructor(){}
 
     constructor(errorCode: String) {
         this.errorCode = errorCode;

@@ -17,7 +17,7 @@ class OpenApiConfiguration {
                     .title("spring boot template")
             )
             .tags(
-                List.of(
+                listOf(
                     Tag().name("spring boot template")
                 )
             )

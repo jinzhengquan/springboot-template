@@ -1,0 +1,8 @@
+type Query{
+  findByName(name: String, page:Int, size:Int):[Student]
+}
+
+type Mutation{
+  addStudent(name: String, createdBy: String): Student!
+  addIdCard(idNumber:String, code:String): IdCard!
+}

@@ -1,5 +1,6 @@
 package com.example.demo.core.exceptions
 
+import com.example.demo.domain.exceptions.DomainException
 import org.springframework.context.MessageSource
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity

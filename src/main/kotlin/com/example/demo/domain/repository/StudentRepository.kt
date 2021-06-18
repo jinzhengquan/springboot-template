@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface StudentRepository : PagingAndSortingRepository<Student, String> {
-    fun findByNameContains(name: String): List<Student>;
+    fun findByNameContains(name: String, pageable:Pageable): List<Student>;
 }
