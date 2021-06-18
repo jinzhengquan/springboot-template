@@ -1,7 +1,7 @@
 # springboot-template
 springboot-template
 
-## 1. 基本需求
+## 1. 使用技术
 
 * Kotlin/Java/GraphQl
 * Gradle 7.0+
