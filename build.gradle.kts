@@ -45,7 +45,6 @@ dependencies {
 	implementation("com.zhokhov.graphql:graphql-datetime-spring-boot-starter:4.0.0")
 	implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:2021.1")
 
-
 	annotationProcessor("org.mapstruct:mapstruct-processor:1.2.0.Final")
 
 	testImplementation(platform("org.junit:junit-bom:5.8.0-M1"))
@@ -57,7 +56,6 @@ dependencies {
 	testImplementation("org.junit.jupiter:junit-jupiter")
 	testImplementation("org.mockito:mockito-junit-jupiter")
 	testImplementation("org.hamcrest:hamcrest-all:1.3")
-	testAnnotationProcessor("org.projectlombok:lombok:1.18.20")
 	testImplementation("io.rest-assured:rest-assured:4.0.0")
 	testImplementation("org.testng:testng:7.1.0")
 }

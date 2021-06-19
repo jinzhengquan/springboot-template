@@ -3,7 +3,7 @@ springboot-template
 
 ## 1. 使用技术
 
-* Kotlin/Java/GraphQl
+* Kotlin/Java1.8/GraphQl
 * Gradle 7.0+
 * spring boot、 jpa、mysql、redis
 * junit
