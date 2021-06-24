@@ -1,9 +1,9 @@
-package com.example.demo.domain.application.input
+package com.example.demo.domain.application.cmd
 
 import com.example.demo.domain.exceptions.ErrorCodes
 import javax.validation.constraints.NotBlank
 
-class AddStudentInput {
+class AddStudentCmd {
     @get:NotBlank(message = ErrorCodes.STUDENT_NAME_IS_NULL)
     var name: String = "";
 

@@ -6,6 +6,7 @@ plugins {
 	checkstyle
 	jacoco
 	id("org.springframework.boot") version "2.4.4"
+	id("com.bmuschko.docker-spring-boot-application") version  "6.7.0"
 	kotlin("jvm") version "1.5.10"
 	kotlin("plugin.spring") version "1.5.10"
 }
@@ -44,6 +45,9 @@ dependencies {
 	implementation("com.graphql-java:graphiql-spring-boot-starter:5.0.2")
 	implementation("com.zhokhov.graphql:graphql-datetime-spring-boot-starter:4.0.0")
 	implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:2021.1")
+    implementation("net.logstash.logback:logstash-logback-encoder:5.2")
+	implementation("ch.qos.logback:logback-classic:1.2.3")
+	implementation("ch.qos.logback:logback-core:1.2.3")
 
 	annotationProcessor("org.mapstruct:mapstruct-processor:1.2.0.Final")
 

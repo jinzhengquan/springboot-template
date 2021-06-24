@@ -1,7 +1,7 @@
 package com.example.demo.rest
 
 import com.example.demo.domain.application.StudentApplicationService
-import com.example.demo.domain.application.input.AddStudentInput
+import com.example.demo.domain.application.cmd.AddStudentCmd
 import com.example.demo.domain.model.Student
 import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.beans.factory.annotation.Autowired
@@ -20,8 +20,8 @@ class StudentController {
     lateinit var studentApplicationService: StudentApplicationService;
 
     @PostMapping("/add")
-    fun add(@Valid @RequestBody addStudentInput: AddStudentInput): Student {
-        return studentApplicationService.addStudent(addStudentInput.name, addStudentInput.createdBy);
+    fun add(@Valid @RequestBody addStudentCmd: AddStudentCmd) {
+        studentApplicationService.addStudent(addStudentCmd.name, addStudentCmd.createdBy);
     }
 
 }
