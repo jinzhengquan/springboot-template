@@ -32,6 +32,15 @@ springboot-template
 cp pre-commit .git/hooks/
 ```
 
+### 4.3 如何构建
+#### 构建为docker
+docker build -t spring-template .
+docker images
+docker run -d -p 8080:8080 26ea2577a965
+
+#### 统一日志的搭建
+https://blog.csdn.net/jinzhengquanqq/article/details/118194813
+
 ## 5.tips
 ### 5.1 GraphQL mutation
 mutation{
